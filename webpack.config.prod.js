@@ -17,7 +17,15 @@ module.exports = {
     }),
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
+        screw_ie8: true,
         warnings: false
+      },
+      mangle: {
+        screw_ie8: true
+      },
+      output: {
+        comments: false,
+        screw_ie8: true
       }
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
